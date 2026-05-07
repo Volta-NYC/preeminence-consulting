@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: "Preeminence Professional Consulting Agency",
   description:
     "Consulting services, academies, and community impact programs by Preeminence Professional Consulting Agency.",
+  icons: {
+    icon: [
+      { url: "/images/ppca-navicon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/images/ppca-navicon.png",
+    apple: "/images/ppca-navicon.png",
+  },
 };
 
 export default function RootLayout({

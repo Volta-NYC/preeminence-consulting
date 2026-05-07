@@ -37,8 +37,8 @@ export default function EventsPage() {
                 <p className="text-sm text-slate-600">{event.location}</p>
                 <p className="mt-3 text-sm text-slate-600">{event.summary}</p>
                 <div className="mt-4 flex gap-3">
-                  <button className="rounded-full border border-[#11284a] px-3 py-1 text-xs font-bold text-[#11284a]">More info</button>
-                  <button className="rounded-full bg-[#f4c64f] px-3 py-1 text-xs font-bold text-[#111827]">Details</button>
+                  <button className="magnetic-cta rounded-full border border-[#11284a] px-3 py-1 text-xs font-bold text-[#11284a]">More info</button>
+                  <button className="magnetic-cta rounded-full bg-[#f4c64f] px-3 py-1 text-xs font-bold text-[#111827]">Details</button>
                 </div>
               </div>
             </article>

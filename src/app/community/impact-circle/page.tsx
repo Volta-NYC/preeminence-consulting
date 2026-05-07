@@ -48,7 +48,7 @@ export default function ImpactCirclePage() {
           </div>
           <p className="mt-5 text-slate-600">{impactCircle.closing}</p>
 
-          <button className="mt-7 rounded-full bg-[#f4c64f] px-5 py-3 text-sm font-extrabold text-[#111827] transition hover:bg-[#f7ce62]">
+          <button className="magnetic-cta mt-7 rounded-full bg-[#f4c64f] px-5 py-3 text-sm font-extrabold text-[#111827] transition hover:bg-[#f7ce62]">
             Join the Impact Circle - $97/month
           </button>
         </section>

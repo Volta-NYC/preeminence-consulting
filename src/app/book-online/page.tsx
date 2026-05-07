@@ -56,7 +56,7 @@ export default function BookOnlinePage() {
                 <p className="mt-3 text-slate-600">Duration: {offering.duration}</p>
                 <p className="mt-1 text-slate-600">{offering.price.replace("$", "")} US dollars</p>
                 <p className="mt-1 text-slate-600">Price: {offering.price}</p>
-                <button className="mt-6 rounded-full bg-[#f4c64f] px-5 py-3 text-sm font-extrabold text-[#111827] transition hover:bg-[#f7ce62]">
+                <button className="magnetic-cta mt-6 rounded-full bg-[#f4c64f] px-5 py-3 text-sm font-extrabold text-[#111827] transition hover:bg-[#f7ce62]">
                   Book Now
                 </button>
               </div>

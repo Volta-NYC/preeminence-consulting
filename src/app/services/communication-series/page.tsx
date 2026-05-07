@@ -95,7 +95,7 @@ export default function CommunicationSeriesPage() {
                     })}
                   </ul>
                   <button
-                    className={`mt-6 w-full rounded-full px-4 py-2.5 text-sm font-bold transition ${
+                    className={`magnetic-cta mt-6 w-full rounded-full px-4 py-2.5 text-sm font-bold transition ${
                       isFeatured
                         ? "bg-emerald-700 text-white hover:bg-emerald-800"
                         : "bg-[#f4c64f] text-[#111827] hover:bg-[#f7ce62]"

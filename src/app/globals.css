@@ -6,6 +6,7 @@
   --navy: #11284a;
   --gold: #f4c64f;
   --green-active: #15803d;
+  --volta-green: #84d61a;
 }
 
 * {
@@ -184,6 +185,63 @@ a {
   }
 }
 
+@keyframes magneticFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  35% {
+    transform: translate3d(1px, -2px, 0) scale(1.018);
+  }
+  70% {
+    transform: translate3d(-1px, -3px, 0) scale(1.024);
+  }
+  100% {
+    transform: translate3d(0, -2px, 0) scale(1.02);
+  }
+}
+
+@keyframes headlineLift {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+    letter-spacing: 0.01em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: normal;
+  }
+}
+
+@keyframes headlineGlow {
+  0% {
+    text-shadow: 0 0 0 rgba(17, 40, 74, 0);
+  }
+  100% {
+    text-shadow: 0 6px 22px rgba(17, 40, 74, 0.1);
+  }
+}
+
+@keyframes typedReveal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 38ch;
+  }
+}
+
+@keyframes typedCaret {
+  0%,
+  49% {
+    border-color: rgba(244, 198, 79, 0.95);
+  }
+  50%,
+  100% {
+    border-color: transparent;
+  }
+}
+
 .animate-fade-up {
   animation: fadeUp 700ms ease both;
 }
@@ -241,6 +299,72 @@ a {
 
 .pulse-border {
   animation: borderPulse 3.4s ease-in-out infinite;
+}
+
+.magnetic-cta {
+  position: relative;
+  isolation: isolate;
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.magnetic-cta::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, rgba(244, 198, 79, 0.35) 0%, rgba(244, 198, 79, 0) 70%);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.magnetic-cta:hover {
+  animation: magneticFloat 380ms ease forwards;
+  box-shadow: 0 12px 26px rgba(17, 40, 74, 0.2);
+  filter: saturate(1.06);
+}
+
+.magnetic-cta:hover::before {
+  opacity: 0.75;
+  transform: scale(1.06);
+}
+
+.magnetic-cta:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
+.islamic-geometry-pattern {
+  background-color: transparent;
+  background-image:
+    repeating-conic-gradient(
+      from 45deg at 50% 50%,
+      rgba(17, 40, 74, 0.08) 0deg 12deg,
+      transparent 12deg 24deg
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(244, 198, 79, 0.2) 0 1.5px,
+      transparent 1.5px 100%
+    );
+  background-size: 86px 86px, 86px 86px;
+  background-position: 0 0, 0 0;
+}
+
+.headline-animated {
+  animation: headlineLift 820ms ease both, headlineGlow 2.4s ease-in-out 820ms infinite alternate;
+}
+
+.typed-tagline {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(244, 198, 79, 0.95);
+  width: 0;
+  animation: typedReveal 2.6s steps(38, end) 0.2s forwards, typedCaret 0.9s step-end infinite;
+  max-width: 100%;
 }
 
 .hover-lift {

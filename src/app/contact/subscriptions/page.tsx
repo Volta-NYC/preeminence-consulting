@@ -45,7 +45,7 @@ export default function SubscriptionsPage() {
 
               <button
                 type="submit"
-                className="mt-2 rounded-full bg-[#f4c64f] px-5 py-3 text-sm font-extrabold text-[#111827] transition hover:bg-[#f7ce62]"
+                className="magnetic-cta mt-2 rounded-full bg-[#f4c64f] px-5 py-3 text-sm font-extrabold text-[#111827] transition hover:bg-[#f7ce62]"
               >
                 Subscribe
               </button>

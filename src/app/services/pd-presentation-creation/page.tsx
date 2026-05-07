@@ -109,7 +109,7 @@ export default function PdPresentationCreationPage() {
                     })}
                   </ul>
                   <button
-                    className={`mt-6 w-full rounded-full px-4 py-2.5 text-sm font-bold transition ${
+                    className={`magnetic-cta mt-6 w-full rounded-full px-4 py-2.5 text-sm font-bold transition ${
                       isFeatured
                         ? "bg-[#185FA5] text-white hover:bg-[#0C447C]"
                         : "bg-[#f4c64f] text-[#111827] hover:bg-[#f7ce62]"

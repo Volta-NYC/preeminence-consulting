@@ -38,7 +38,7 @@ export default function GroupsPage() {
               <p className="mt-2 text-sm text-slate-600">
                 {group.type} - {group.members}
               </p>
-              <button className="mt-4 rounded-full bg-[#f4c64f] px-4 py-2 text-xs font-bold text-[#111827] transition hover:bg-[#f7ce62]">
+              <button className="magnetic-cta mt-4 rounded-full bg-[#f4c64f] px-4 py-2 text-xs font-bold text-[#111827] transition hover:bg-[#f7ce62]">
                 {group.action}
               </button>
             </article>

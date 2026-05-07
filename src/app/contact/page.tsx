@@ -142,7 +142,7 @@ export default function ContactPage() {
                   <div className="mt-1 flex flex-wrap items-center gap-4">
                     <button
                       type="submit"
-                      className="rounded-full bg-[#11284a] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:bg-[#1a3a64]"
+                      className="magnetic-cta rounded-full bg-[#11284a] px-6 py-3 text-xs font-bold uppercase tracking-[0.14em] text-white transition hover:bg-[#1a3a64]"
                     >
                       Submit Inquiry
                     </button>
@@ -266,7 +266,7 @@ export default function ContactPage() {
                   <div className="flex flex-wrap gap-3 pt-2">
                     <button
                       type="submit"
-                      className="rounded-full bg-[#f4c64f] px-5 py-2.5 text-xs font-extrabold uppercase tracking-[0.14em] text-[#111827] transition hover:bg-[#f7ce62]"
+                      className="magnetic-cta rounded-full bg-[#f4c64f] px-5 py-2.5 text-xs font-extrabold uppercase tracking-[0.14em] text-[#111827] transition hover:bg-[#f7ce62]"
                     >
                       Subscribe
                     </button>

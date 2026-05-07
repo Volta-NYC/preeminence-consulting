@@ -132,7 +132,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="w-full rounded-lg bg-[#11284a] px-4 py-2.5 text-sm font-bold text-white transition hover:bg-[#1a3a64]"
+              className="magnetic-cta w-full rounded-lg bg-[#11284a] px-4 py-2.5 text-sm font-bold text-white transition hover:bg-[#1a3a64]"
             >
               Subscribe To Mailing List
             </button>
@@ -141,7 +141,20 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-[#cfd9f2] py-3 text-center text-xs text-slate-500">
-        (c)2026 Preeminence Professional Consulting Agency
+        <p>(c)2026 Preeminence Professional Consulting Agency</p>
+        <p className="mt-1 inline-flex items-center justify-center gap-1.5">
+          <span>Made by</span>
+          <Image src="/images/home/volta-logo.jpg" alt="Volta logo mark" width={14} height={14} className="rounded-sm" />
+          <a
+            href="https://voltanyc.org"
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold"
+            style={{ color: "var(--volta-green)" }}
+          >
+            Volta
+          </a>
+        </p>
       </div>
     </footer>
   );

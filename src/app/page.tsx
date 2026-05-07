@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { aboutCopy } from "@/lib/legacy-content";
 import { communityLinks, serviceLinks, socialLinks } from "@/lib/site-data";
+import { wixMedia } from "@/lib/wix-media";
 
 const coreValues = [
   {
@@ -41,11 +42,39 @@ const coreValues = [
   },
 ];
 
-const galleryPlaceholders = [
-  "Founder Image Placeholder",
-  "Mission Image Placeholder",
-  "Services Image Placeholder",
-  "Community Image Placeholder",
+const homeGalleryImages = [
+  {
+    src: "/images/home/workshop-session.jpg",
+    alt: "Dr. Fuller leading a professional workshop with attendees in a classroom setting",
+    width: 1440,
+    height: 1440,
+    label: "Live Workshop Facilitation",
+    imageClass: "object-center",
+  },
+  {
+    src: "/images/home/community-book-group.jpg",
+    alt: "Community members holding copies of Consequential Correspondence at an event",
+    width: 2047,
+    height: 1366,
+    label: "Community Book Engagement",
+    imageClass: "object-center",
+  },
+  {
+    src: "/images/home/founder-group-portrait.jpg",
+    alt: "Dr. Fuller with partners and supporters at a professional networking event",
+    width: 2048,
+    height: 1365,
+    label: "Leadership Network Building",
+    imageClass: "object-center",
+  },
+  {
+    src: "/images/home/founder-book-portrait.jpg",
+    alt: "Dr. Fuller presenting her book Consequential Correspondence",
+    width: 1366,
+    height: 2047,
+    label: "Founder Publication Spotlight",
+    imageClass: "object-top",
+  },
 ];
 
 const socialCardThemes: Record<string, string> = {
@@ -75,8 +104,8 @@ export default function Home() {
       <main className="relative z-10">
         <section id="home" className="relative isolate overflow-hidden border-b border-[#cfd9f2]">
           <Image
-            src="https://static.wixstatic.com/media/8cc4ec_586d7d73d36d44b59e329ad55495dd66~mv2.jpg/v1/fill/w_1600,h_920,al_c,q_85,enc_avif,quality_auto/8cc4ec_586d7d73d36d44b59e329ad55495dd66~mv2.jpg"
-            alt="Preeminence consulting team in a strategic planning discussion"
+            src="/images/home/workshop-session.jpg"
+            alt="Dr. Fuller presenting to a professional audience during a learning session"
             fill
             priority
             className="object-cover"
@@ -91,52 +120,120 @@ export default function Home() {
               <p className="animate-scale-in mb-4 inline-flex rounded-full border border-[#f4c64f]/70 bg-[#f4c64f]/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[#fff7df]">
                 Preeminence Professional Consulting Agency
               </p>
-              <h1 className="animate-fade-up-delay-1 text-4xl font-extrabold leading-tight text-white md:text-6xl">
+              <h1 className="headline-animated animate-fade-up-delay-1 text-4xl font-extrabold leading-tight text-white md:text-6xl">
                 Transforming Organizations Through Expert Consulting
               </h1>
+              <p className="typed-tagline mt-4 text-xs font-bold uppercase tracking-[0.14em] text-[#fde8a5] md:text-sm">
+                Build with structure. Scale with impact.
+              </p>
               <p className="animate-fade-up-delay-2 mt-5 max-w-2xl text-base text-slate-100 md:text-lg">
                 {aboutCopy.intro[0]} {aboutCopy.intro[1]}
               </p>
               <Link
                 href="/services"
-                className="animate-pulse-glow hover-lift shine-surface mt-8 inline-flex rounded-full bg-[#f4c64f] px-6 py-3 text-sm font-extrabold text-[#111827] ring-2 ring-[#fde8a5] transition hover:bg-[#f7ce62]"
+                className="animate-pulse-glow hover-lift shine-surface magnetic-cta mt-8 inline-flex rounded-full bg-[#f4c64f] px-6 py-3 text-sm font-extrabold text-[#111827] ring-2 ring-[#fde8a5] transition hover:bg-[#f7ce62]"
               >
                 Explore Our Services
               </Link>
             </div>
           </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-px text-[#e9f1ff]">
+            <svg viewBox="0 0 1440 180" preserveAspectRatio="none" className="h-16 w-full md:h-20">
+              <path
+                fill="currentColor"
+                d="M0,128L60,122.7C120,117,240,107,360,112C480,117,600,139,720,144C840,149,960,139,1080,122.7C1200,107,1320,85,1380,74.7L1440,64L1440,181L1380,181C1320,181,1200,181,1080,181C960,181,840,181,720,181C600,181,480,181,360,181C240,181,120,181,60,181L0,181Z"
+              />
+            </svg>
+          </div>
         </section>
 
-        <section className="stagger-children mx-auto grid w-full max-w-4xl grid-cols-1 gap-5 px-4 py-12 md:grid-cols-2 md:px-8">
-          {galleryPlaceholders.map((placeholder, index) => (
-            <div
-              key={placeholder}
-              className="hover-lift hover-tilt shine-surface group relative aspect-video overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] shadow-md"
-              style={{ animationDelay: `${index * 90}ms` }}
-            >
-              <div className="flex h-full w-full items-center justify-center border-2 border-dashed border-[#bccbe8] bg-[#dce8ff] p-4 text-center">
-                <p className="text-sm font-bold uppercase tracking-[0.12em] text-slate-500">{placeholder}</p>
+        <section className="relative overflow-hidden border-b border-[#cfd9f2]">
+          <div aria-hidden="true" className="islamic-geometry-pattern pointer-events-none absolute inset-0 opacity-35" />
+          <div className="relative">
+            <section className="mx-auto w-full max-w-7xl px-4 py-12 md:px-8">
+              <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Featured Moments</h2>
+              <p className="mt-3 max-w-3xl text-slate-600">
+                Real experiences from workshops, publications, and community events led by Preeminence.
+              </p>
+              <div className="stagger-children mt-7 grid grid-cols-1 gap-5 md:grid-cols-2">
+                {homeGalleryImages.map((image, index) => (
+                  <article
+                    key={image.label}
+                    className="hover-lift hover-tilt shine-surface overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] shadow-md"
+                    style={{ animationDelay: `${index * 90}ms` }}
+                  >
+                    <div className="group relative aspect-[16/11]">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className={`object-cover transition duration-500 group-hover:scale-105 ${image.imageClass}`}
+                      />
+                    </div>
+                    <div className="border-t border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3">
+                      <p className="text-sm font-semibold text-[#11284a]">{image.label}</p>
+                    </div>
+                  </article>
+                ))}
               </div>
-            </div>
-          ))}
+            </section>
+
+            <section className="mx-auto w-full max-w-7xl px-4 pb-14 md:px-8">
+              <div className="stagger-children grid grid-cols-1 gap-6 md:grid-cols-2">
+                <article className="hover-lift shine-surface pulse-border animate-fade-left rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md">
+                  <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Our Mission</h2>
+                  <p className="mt-4 text-slate-600">{aboutCopy.intro[1]}</p>
+                </article>
+                <article
+                  className="hover-lift shine-surface pulse-border animate-fade-right rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md"
+                  style={{ animationDelay: "120ms" }}
+                >
+                  <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Our Vision</h2>
+                  <p className="mt-4 text-slate-600">{aboutCopy.intro[2]}</p>
+                </article>
+              </div>
+            </section>
+          </div>
         </section>
 
-        <section className="mx-auto w-full max-w-7xl px-4 pb-14 md:px-8">
-          <div className="stagger-children grid grid-cols-1 gap-6 md:grid-cols-2">
-            <article className="hover-lift shine-surface pulse-border animate-fade-left rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md">
-              <h2 className="text-3xl font-bold text-[#11284a]">Our Mission</h2>
-              <p className="mt-4 text-slate-600">{aboutCopy.intro[1]}</p>
+        <section className="mx-auto w-full max-w-7xl px-4 pb-16 pt-14 md:px-8">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.05fr_1fr]">
+            <article className="overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] shadow-md">
+              <div className="group relative aspect-[4/3]">
+                <Image
+                  src={wixMedia("8cc4ec_bb3d9994b8504df7937d75964bd2a872~mv2.avif", 760, 1240)}
+                  alt="Dr. Anesha Fuller founder portrait"
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105 object-top"
+                />
+              </div>
             </article>
-            <article className="hover-lift shine-surface pulse-border animate-fade-right rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md" style={{ animationDelay: "120ms" }}>
-              <h2 className="text-3xl font-bold text-[#11284a]">Our Vision</h2>
-              <p className="mt-4 text-slate-600">{aboutCopy.intro[2]}</p>
+            <article className="rounded-3xl border border-[#cfd9f2] bg-[#f4f7ff] p-7 shadow-md">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#11284a]">Founder Spotlight</p>
+              <h2 className="headline-animated mt-3 text-3xl font-bold text-[#11284a]">{aboutCopy.founderName}</h2>
+              <p className="mt-2 text-base font-semibold text-emerald-700">{aboutCopy.founderRole}</p>
+              <p className="mt-4 text-slate-600">{aboutCopy.workImpact}</p>
+              <ul className="mt-5 space-y-2 text-sm text-slate-600">
+                {aboutCopy.founderFocus.slice(0, 4).map((focus) => (
+                  <li key={focus} className="flex gap-2">
+                    <span className="mt-[9px] h-[2px] w-2.5 shrink-0 bg-[#f4c64f]" />
+                    <span>{focus}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/about-us"
+                className="magnetic-cta mt-6 inline-flex rounded-full bg-[#11284a] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1a3a64]"
+              >
+                Learn More About Our Founder
+              </Link>
             </article>
           </div>
         </section>
 
         <section className="mx-auto w-full max-w-7xl px-4 pb-16 md:px-8">
           <div className="shine-surface animate-fade-up rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-8 shadow-md">
-            <h2 className="text-center text-3xl font-bold text-[#11284a]">Connect With Us</h2>
+            <h2 className="headline-animated text-center text-3xl font-bold text-[#11284a]">Connect With Us</h2>
             <p className="mx-auto mt-3 max-w-3xl text-center text-slate-600">
               Stay connected and receive updates on our work, upcoming events, and opportunities by following our
               official platforms.
@@ -164,13 +261,13 @@ export default function Home() {
         <section id="services" className="relative overflow-hidden border-y border-[#cfd9f2] bg-[#e9f1ff] py-16">
           <div aria-hidden="true" className="animate-float-slow absolute -top-10 left-1/3 h-40 w-40 rounded-full bg-[#f4c64f]/20 blur-3xl" />
           <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
-            <h2 className="text-3xl font-bold text-[#11284a]">Services &amp; Academies</h2>
+            <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Services &amp; Academies</h2>
             <div className="stagger-children mt-6 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
               {serviceLinks.map((item, index) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="hover-lift shine-surface rounded-xl border border-[#cfd9f2] bg-[#eaf0ff] px-4 py-3 font-semibold text-slate-700 transition hover:border-[#f4c64f] hover:text-[#11284a]"
+                  className="hover-lift shine-surface magnetic-cta rounded-xl border border-[#cfd9f2] bg-[#eaf0ff] px-4 py-3 font-semibold text-slate-700 transition hover:border-[#f4c64f] hover:text-[#11284a]"
                   style={{ animationDelay: `${index * 70}ms` }}
                 >
                   {item.label}
@@ -181,7 +278,7 @@ export default function Home() {
         </section>
 
         <section className="mx-auto w-full max-w-7xl px-4 py-16 md:px-8">
-          <h2 className="text-3xl font-bold text-[#11284a]">Core Values</h2>
+          <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Core Values</h2>
           <div className="stagger-children mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
             {coreValues.map((value, index) => (
               <article
@@ -204,13 +301,13 @@ export default function Home() {
         <section id="community" className="relative overflow-hidden bg-[#dce8ff] py-16">
           <div aria-hidden="true" className="animate-float-reverse absolute -right-10 bottom-3 h-44 w-44 rounded-full bg-[#f4c64f]/25 blur-3xl" />
           <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
-            <h2 className="text-3xl font-bold text-[#11284a]">Community</h2>
+            <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Community</h2>
             <div className="stagger-children mt-6 grid grid-cols-1 gap-3 md:grid-cols-3">
               {communityLinks.map((item, index) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="hover-lift shine-surface rounded-xl border border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3 font-semibold text-slate-700 transition hover:border-[#f4c64f] hover:text-[#11284a]"
+                  className="hover-lift shine-surface magnetic-cta rounded-xl border border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3 font-semibold text-slate-700 transition hover:border-[#f4c64f] hover:text-[#11284a]"
                   style={{ animationDelay: `${index * 90}ms` }}
                 >
                   {item.label}

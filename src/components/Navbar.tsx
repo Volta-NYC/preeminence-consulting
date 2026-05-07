@@ -170,7 +170,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/book-online"
-              className="animate-pulse-glow hover-lift shine-surface inline-flex rounded-full bg-[#f4c64f] px-5 py-2 text-sm font-extrabold text-[#111827] ring-2 ring-[#f7d982] transition hover:bg-[#f7ce62]"
+              className="animate-pulse-glow hover-lift shine-surface magnetic-cta inline-flex rounded-full bg-[#f4c64f] px-5 py-2 text-sm font-extrabold text-[#111827] ring-2 ring-[#f7d982] transition hover:bg-[#f7ce62]"
             >
               Book Online
             </Link>

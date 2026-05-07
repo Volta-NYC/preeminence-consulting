@@ -148,52 +148,49 @@ export default function Home() {
         </section>
 
         <section className="relative overflow-hidden border-b border-[#cfd9f2]">
-          <div aria-hidden="true" className="islamic-geometry-pattern pointer-events-none absolute inset-0 opacity-35" />
-          <div className="relative">
-            <section className="mx-auto w-full max-w-7xl px-4 py-12 md:px-8">
-              <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Featured Moments</h2>
-              <p className="mt-3 max-w-3xl text-slate-600">
-                Real experiences from workshops, publications, and community events led by Preeminence.
-              </p>
-              <div className="stagger-children mt-7 grid grid-cols-1 gap-5 md:grid-cols-2">
-                {homeGalleryImages.map((image, index) => (
-                  <article
-                    key={image.label}
-                    className="hover-lift hover-tilt shine-surface overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] shadow-md"
-                    style={{ animationDelay: `${index * 90}ms` }}
-                  >
-                    <div className="group relative aspect-[16/11]">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className={`object-cover transition duration-500 group-hover:scale-105 ${image.imageClass}`}
-                      />
-                    </div>
-                    <div className="border-t border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3">
-                      <p className="text-sm font-semibold text-[#11284a]">{image.label}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="mx-auto w-full max-w-7xl px-4 pb-14 md:px-8">
-              <div className="stagger-children grid grid-cols-1 gap-6 md:grid-cols-2">
-                <article className="hover-lift shine-surface pulse-border animate-fade-left rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md">
-                  <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Our Mission</h2>
-                  <p className="mt-4 text-slate-600">{aboutCopy.intro[1]}</p>
-                </article>
+          <section className="mx-auto w-full max-w-7xl px-4 py-12 md:px-8">
+            <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Featured Moments</h2>
+            <p className="mt-3 max-w-3xl text-slate-600">
+              Real experiences from workshops, publications, and community events led by Preeminence.
+            </p>
+            <div className="stagger-children mt-7 grid grid-cols-1 gap-5 md:grid-cols-2">
+              {homeGalleryImages.map((image, index) => (
                 <article
-                  className="hover-lift shine-surface pulse-border animate-fade-right rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md"
-                  style={{ animationDelay: "120ms" }}
+                  key={image.label}
+                  className="hover-lift hover-tilt shine-surface overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] shadow-md"
+                  style={{ animationDelay: `${index * 90}ms` }}
                 >
-                  <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Our Vision</h2>
-                  <p className="mt-4 text-slate-600">{aboutCopy.intro[2]}</p>
+                  <div className="group relative aspect-[16/11]">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className={`object-cover transition duration-500 group-hover:scale-105 ${image.imageClass}`}
+                    />
+                  </div>
+                  <div className="border-t border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3">
+                    <p className="text-sm font-semibold text-[#11284a]">{image.label}</p>
+                  </div>
                 </article>
-              </div>
-            </section>
-          </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mx-auto w-full max-w-7xl px-4 pb-14 md:px-8">
+            <div className="stagger-children grid grid-cols-1 gap-6 md:grid-cols-2">
+              <article className="hover-lift shine-surface pulse-border animate-fade-left rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md">
+                <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Our Mission</h2>
+                <p className="mt-4 text-slate-600">{aboutCopy.intro[1]}</p>
+              </article>
+              <article
+                className="hover-lift shine-surface pulse-border animate-fade-right rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md"
+                style={{ animationDelay: "120ms" }}
+              >
+                <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Our Vision</h2>
+                <p className="mt-4 text-slate-600">{aboutCopy.intro[2]}</p>
+              </article>
+            </div>
+          </section>
         </section>
 
         <section className="mx-auto w-full max-w-7xl px-4 pb-16 pt-14 md:px-8">

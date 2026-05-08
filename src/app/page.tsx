@@ -100,8 +100,13 @@ function CoreValueIcon() {
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#e6efff] text-slate-800">
-      <Navbar />
-      <main className="relative z-10">
+      <div
+        aria-hidden="true"
+        className="islamic-geometry-pattern-home pointer-events-none absolute inset-0 z-[1] opacity-[0.38]"
+      />
+      <div className="relative z-10">
+        <Navbar />
+        <main className="relative z-10">
         <section id="home" className="relative isolate overflow-hidden border-b border-[#cfd9f2]">
           <Image
             src="/images/home/workshop-session.jpg"
@@ -111,6 +116,7 @@ export default function Home() {
             className="object-cover"
           />
           <div className="animate-gradient-pan absolute inset-0 bg-gradient-to-r from-[#0b172d]/75 via-[#11284a]/55 to-[#0b172d]/70" />
+          <div className="islamic-geometry-pattern-home absolute inset-0 opacity-[0.36] mix-blend-soft-light" />
           <div className="animate-float-slow absolute -left-10 top-10 h-48 w-48 rounded-full bg-[#f4c64f]/30 blur-3xl" />
           <div className="animate-float-reverse absolute right-0 top-1/3 h-64 w-64 rounded-full bg-[#dbeafe]/40 blur-3xl" />
           <div className="animate-float-slow absolute bottom-12 right-20 h-36 w-36 rounded-full bg-[#fde68a]/35 blur-3xl" />
@@ -313,8 +319,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

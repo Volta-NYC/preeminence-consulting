@@ -2,14 +2,6 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { events } from "@/lib/legacy-content";
-import { wixMedia } from "@/lib/wix-media";
-
-const eventImages = [
-  wixMedia("8cc4ec_a62a1617e7e742cf9b8ccef1d0051d42~mv2.png", 1200, 760),
-  wixMedia("8cc4ec_ace15997f79c4220a123ad27b8b5f285~mv2.jpeg", 1200, 760),
-  wixMedia("8cc4ec_e2327a37344c45c292ba96b0cbae0c28~mv2.jpeg", 1200, 760),
-  wixMedia("8cc4ec_f74e402c7c4a498d87d2241e39f37b0c~mv2.jpg", 1200, 760),
-];
 
 export default function EventsPage() {
   return (
@@ -19,11 +11,11 @@ export default function EventsPage() {
         <h1 className="text-4xl font-extrabold text-[#11284a] md:text-5xl">Upcoming Events</h1>
 
         <section className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {events.map((event, index) => (
+          {events.map((event) => (
             <article key={event.title} className="overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#f4f7ff] shadow-md">
               <div className="border-b border-[#cfd9f2] bg-[#eaf0ff]">
                 <Image
-                  src={eventImages[index % eventImages.length]}
+                  src={event.image}
                   alt={`${event.title} event visual`}
                   width={1200}
                   height={760}

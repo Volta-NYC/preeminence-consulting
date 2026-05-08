@@ -587,6 +587,7 @@ export const events = [
     location: "Online Virtual Meet",
     type: "Professional Development Workshop",
     summary: "A practical teacher development session focused on collaboration structures, role clarity, and classroom support alignment.",
+    image: "https://static.wixstatic.com/media/8cc4ec_4ae30af616fd42f192f99528be140ded~mv2.webp",
   },
   {
     title: "Seal the Deal: Notary Training for Beginners",
@@ -594,6 +595,7 @@ export const events = [
     location: "Online Virtual Meet",
     type: "Career Skills Training",
     summary: "An entry-level training that introduces core notary procedures, requirements, and launch guidance for beginners.",
+    image: "https://static.wixstatic.com/media/8cc4ec_a62a1617e7e742cf9b8ccef1d0051d42~mv2.png",
   },
   {
     title: "Teacher Reboot Academy: Differentiated Instruction for Diverse Learners",
@@ -601,6 +603,7 @@ export const events = [
     location: "Online Virtual Class",
     type: "Professional Development Workshop",
     summary: "A targeted session on differentiated instruction strategies to support varied learning profiles and classroom outcomes.",
+    image: "https://static.wixstatic.com/media/8cc4ec_0936cd9fa6b74811b180ed99df692578~mv2.webp",
   },
   {
     title: "Teacher Reboot Academy: Classroom Management For Every Grade",
@@ -608,6 +611,7 @@ export const events = [
     location: "Online Virtual Meet",
     type: "Professional Development Workshop",
     summary: "A classroom management training focused on routines, behavior systems, and grade-appropriate engagement structures.",
+    image: "https://static.wixstatic.com/media/8cc4ec_e872de14e47f48da875f8fb48e7838d7~mv2.webp",
   },
   {
     title: "Teacher Reboot Academy: Effective Lesson Planning Master Class",
@@ -615,6 +619,7 @@ export const events = [
     location: "Online Virtual Meet",
     type: "Professional Development Workshop",
     summary: "A master class covering lesson planning flow, objective alignment, pacing, and instructional clarity.",
+    image: "https://static.wixstatic.com/media/8cc4ec_c1c49bc1cb6443adbba13d29f14a0d68~mv2.webp",
   },
   {
     title: "Turning Your Skills Into a Hustle",
@@ -622,6 +627,7 @@ export const events = [
     location: "Online Virtual Class",
     type: "Entrepreneurship Training",
     summary: "A business development session designed to help professionals package their expertise into profitable offers.",
+    image: "https://static.wixstatic.com/media/8cc4ec_ace15997f79c4220a123ad27b8b5f285~mv2.jpeg",
   },
 ];
 

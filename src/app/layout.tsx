@@ -24,14 +24,14 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className="relative min-h-full overflow-x-hidden bg-[#e6efff] text-slate-900 antialiased">
         <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0">
-          <div className="islamic-geometry-pattern absolute inset-0 opacity-[0.28]" />
+          <div className="islamic-geometry-pattern absolute inset-0 opacity-[0.32]" />
           <div className="animate-float-slow absolute -left-24 top-24 h-72 w-72 rounded-full bg-[#f4c64f]/18 blur-3xl" />
           <div className="animate-float-reverse absolute right-[-5rem] top-1/3 h-96 w-96 rounded-full bg-[#c8ddff]/35 blur-3xl" />
           <div className="animate-float-slow absolute bottom-[-8rem] left-1/3 h-96 w-96 rounded-full bg-[#d7e5ff]/40 blur-3xl" />
         </div>
         <div className="relative z-10">{children}</div>
         <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-20">
-          <div className="islamic-geometry-overlay absolute inset-0 opacity-[0.16] mix-blend-multiply" />
+          <div className="islamic-geometry-overlay absolute inset-0 opacity-[0.2] mix-blend-multiply" />
         </div>
       </body>
     </html>

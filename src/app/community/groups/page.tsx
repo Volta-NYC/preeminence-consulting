@@ -35,9 +35,7 @@ export default function GroupsPage() {
           {groups.map((group) => (
             <article key={group.name} className="rounded-2xl border border-[#cfd9f2] bg-[#f4f7ff] p-5 shadow-sm">
               <h2 className="text-xl font-bold text-[#11284a]">{group.name}</h2>
-              <p className="mt-2 text-sm text-slate-600">
-                {group.type} - {group.members}
-              </p>
+              <p className="mt-2 text-sm text-slate-600">{group.type}</p>
               <button className="magnetic-cta mt-4 rounded-full bg-[#f4c64f] px-4 py-2 text-xs font-bold text-[#111827] transition hover:bg-[#f7ce62]">
                 {group.action}
               </button>

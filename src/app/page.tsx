@@ -163,7 +163,7 @@ export default function Home() {
               {homeGalleryImages.map((image, index) => (
                 <article
                   key={image.label}
-                  className="hover-lift hover-tilt shine-surface overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] shadow-md"
+                  className="hover-lift shine-surface overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] shadow-md"
                   style={{ animationDelay: `${index * 90}ms` }}
                 >
                   <div className="group relative aspect-[16/11]">
@@ -171,7 +171,7 @@ export default function Home() {
                       src={image.src}
                       alt={image.alt}
                       fill
-                      className={`object-cover transition duration-500 group-hover:scale-105 ${image.imageClass}`}
+                      className={`object-cover transition duration-300 group-hover:scale-[1.02] ${image.imageClass}`}
                     />
                   </div>
                   <div className="border-t border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3">
@@ -207,7 +207,7 @@ export default function Home() {
                   src={wixMedia("8cc4ec_bb3d9994b8504df7937d75964bd2a872~mv2.avif", 760, 1240)}
                   alt="Dr. Anesha Fuller founder portrait"
                   fill
-                  className="object-cover transition duration-500 group-hover:scale-105 object-top"
+                  className="object-cover object-top transition duration-300 group-hover:scale-[1.02]"
                 />
               </div>
             </article>
@@ -226,7 +226,7 @@ export default function Home() {
               </ul>
               <Link
                 href="/about-us"
-                className="magnetic-cta mt-6 inline-flex rounded-full bg-[#11284a] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1a3a64]"
+                className="magnetic-cta mt-6 inline-flex rounded-full bg-[#f4c64f] px-5 py-2.5 text-sm font-bold text-[#111827] ring-1 ring-[#d7ab35] transition hover:bg-[#f7ce62]"
               >
                 Learn More About Our Founder
               </Link>
@@ -248,7 +248,7 @@ export default function Home() {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className={`hover-lift hover-tilt shine-surface animate-scale-in group flex flex-col items-center gap-3 rounded-2xl border px-8 py-5 text-center transition hover:border-[#f4c64f] hover:shadow-md ${
+                  className={`hover-lift shine-surface animate-scale-in group flex flex-col items-center gap-3 rounded-2xl border px-8 py-5 text-center transition hover:border-[#f4c64f] hover:shadow-md ${
                     socialCardThemes[social.label] ?? "border-[#cfd9f2] bg-[#e6efff]"
                   }`}
                   style={{ animationDelay: `${index * 120}ms` }}
@@ -270,7 +270,7 @@ export default function Home() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="hover-lift shine-surface magnetic-cta rounded-xl border border-[#cfd9f2] bg-[#eaf0ff] px-4 py-3 font-semibold text-slate-700 transition hover:border-[#f4c64f] hover:text-[#11284a]"
+                  className="hover-lift rounded-xl border border-[#cfd9f2] bg-[#eaf0ff] px-4 py-3 font-semibold text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-[#f4c64f] hover:text-[#11284a]"
                   style={{ animationDelay: `${index * 70}ms` }}
                 >
                   {item.label}
@@ -310,7 +310,7 @@ export default function Home() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="hover-lift shine-surface magnetic-cta rounded-xl border border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3 font-semibold text-slate-700 transition hover:border-[#f4c64f] hover:text-[#11284a]"
+                  className="hover-lift rounded-xl border border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3 font-semibold text-slate-700 transition duration-200 hover:-translate-y-0.5 hover:border-[#f4c64f] hover:text-[#11284a]"
                   style={{ animationDelay: `${index * 90}ms` }}
                 >
                   {item.label}

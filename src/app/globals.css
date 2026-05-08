@@ -160,13 +160,13 @@ a {
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(2deg);
+    transform: rotate(1deg);
   }
   50% {
     transform: rotate(0deg);
   }
   75% {
-    transform: rotate(-2deg);
+    transform: rotate(-1deg);
   }
   100% {
     transform: rotate(0deg);
@@ -441,7 +441,7 @@ a {
 }
 
 .hover-tilt:hover {
-  transform: rotateX(3deg) rotateY(-3deg) translateY(-4px);
+  transform: rotateX(1.25deg) rotateY(-1.25deg) translateY(-2px);
 }
 
 .shine-surface {

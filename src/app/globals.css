@@ -247,7 +247,7 @@ a {
     background-position: 0 0, 0 0, 0 0;
   }
   50% {
-    background-position: 40px 28px, -28px 18px, 18px -22px;
+    background-position: 20px 14px, -14px 10px, 8px -12px;
   }
   100% {
     background-position: 0 0, 0 0, 0 0;
@@ -349,47 +349,68 @@ a {
 }
 
 .islamic-geometry-pattern {
-  background-color: transparent;
   background-image:
     repeating-conic-gradient(
-      from 45deg at 50% 50%,
-      rgba(17, 40, 74, 0.12) 0deg 11deg,
-      transparent 11deg 22deg
+      from 0deg at 50% 50%,
+      rgba(17, 40, 74, 0.045) 0deg 9deg,
+      transparent 9deg 18deg
     ),
     radial-gradient(
       circle at 50% 50%,
-      rgba(244, 198, 79, 0.26) 0 1.5px,
-      transparent 1.5px 100%
+      rgba(244, 198, 79, 0.08) 0 1px,
+      transparent 1px 100%
     ),
     repeating-conic-gradient(
-      from 0deg at 25% 25%,
-      rgba(17, 40, 74, 0.08) 0deg 8deg,
+      from 45deg at 50% 50%,
+      rgba(17, 40, 74, 0.03) 0deg 9deg,
+      transparent 9deg 18deg
+    );
+  background-size: 168px 168px, 168px 168px, 168px 168px;
+  background-position: 0 0, 0 0, 0 0;
+  animation: geometryDrift 34s ease-in-out infinite;
+}
+
+.islamic-geometry-overlay {
+  background-image:
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(17, 40, 74, 0.05) 0deg 8deg,
+      transparent 8deg 16deg
+    ),
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      rgba(244, 198, 79, 0.06) 0 1.2px,
+      transparent 1.2px 17px
+    ),
+    repeating-conic-gradient(
+      from 45deg at 50% 50%,
+      rgba(17, 40, 74, 0.03) 0deg 8deg,
       transparent 8deg 16deg
     );
-  background-size: 82px 82px, 82px 82px, 164px 164px;
+  background-size: 156px 156px, 156px 156px, 156px 156px;
   background-position: 0 0, 0 0, 0 0;
-  animation: geometryDrift 26s ease-in-out infinite;
+  animation: geometryDrift 28s ease-in-out infinite;
 }
 
 .islamic-geometry-pattern-home {
   background-image:
     repeating-conic-gradient(
       from 32deg at 50% 50%,
-      rgba(17, 40, 74, 0.24) 0deg 10deg,
+      rgba(17, 40, 74, 0.12) 0deg 10deg,
       rgba(17, 40, 74, 0) 10deg 20deg
     ),
     repeating-radial-gradient(
       circle at 50% 50%,
-      rgba(244, 198, 79, 0.3) 0 2px,
+      rgba(244, 198, 79, 0.16) 0 1.5px,
       rgba(244, 198, 79, 0) 2px 18px
     ),
     repeating-conic-gradient(
       from 0deg at 75% 25%,
-      rgba(17, 40, 74, 0.13) 0deg 9deg,
+      rgba(17, 40, 74, 0.08) 0deg 9deg,
       transparent 9deg 18deg
     );
-  background-size: 70px 70px, 70px 70px, 140px 140px;
-  animation: geometryDrift 16s ease-in-out infinite;
+  background-size: 132px 132px, 132px 132px, 264px 264px;
+  animation: geometryDrift 22s ease-in-out infinite;
 }
 
 .headline-animated {

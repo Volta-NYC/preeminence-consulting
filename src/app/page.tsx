@@ -102,56 +102,56 @@ export default function Home() {
     <div className="relative min-h-screen overflow-hidden bg-[#e6efff] text-slate-800">
       <div
         aria-hidden="true"
-        className="islamic-geometry-pattern-home pointer-events-none absolute inset-0 z-[1] opacity-[0.38]"
+        className="islamic-geometry-pattern-home pointer-events-none absolute inset-0 z-[1] opacity-[0.14]"
       />
       <div className="relative z-10">
         <Navbar />
         <main className="relative z-10">
-        <section id="home" className="relative isolate overflow-hidden border-b border-[#cfd9f2]">
-          <Image
-            src="/images/home/workshop-session.jpg"
-            alt="Dr. Fuller presenting to a professional audience during a learning session"
-            fill
-            priority
-            className="object-cover"
-          />
-          <div className="animate-gradient-pan absolute inset-0 bg-gradient-to-r from-[#0b172d]/75 via-[#11284a]/55 to-[#0b172d]/70" />
-          <div className="islamic-geometry-pattern-home absolute inset-0 opacity-[0.36] mix-blend-soft-light" />
-          <div className="animate-float-slow absolute -left-10 top-10 h-48 w-48 rounded-full bg-[#f4c64f]/30 blur-3xl" />
-          <div className="animate-float-reverse absolute right-0 top-1/3 h-64 w-64 rounded-full bg-[#dbeafe]/40 blur-3xl" />
-          <div className="animate-float-slow absolute bottom-12 right-20 h-36 w-36 rounded-full bg-[#fde68a]/35 blur-3xl" />
+          <section id="home" className="relative isolate overflow-hidden border-b border-[#cfd9f2]">
+            <Image
+              src="/images/home/workshop-session.jpg"
+              alt="Dr. Fuller presenting to a professional audience during a learning session"
+              fill
+              priority
+              className="object-cover"
+            />
+            <div className="animate-gradient-pan absolute inset-0 bg-gradient-to-r from-[#0b172d]/75 via-[#11284a]/55 to-[#0b172d]/70" />
+            <div className="islamic-geometry-pattern-home absolute inset-0 opacity-[0.18] mix-blend-soft-light" />
+            <div className="animate-float-slow absolute -left-10 top-10 h-48 w-48 rounded-full bg-[#f4c64f]/30 blur-3xl" />
+            <div className="animate-float-reverse absolute right-0 top-1/3 h-64 w-64 rounded-full bg-[#dbeafe]/40 blur-3xl" />
+            <div className="animate-float-slow absolute bottom-12 right-20 h-36 w-36 rounded-full bg-[#fde68a]/35 blur-3xl" />
 
-          <div className="relative mx-auto flex min-h-[78vh] w-full max-w-7xl items-center px-4 py-24 md:px-8">
-            <div className="max-w-3xl animate-fade-left">
-              <p className="animate-scale-in mb-4 inline-flex rounded-full border border-[#f4c64f]/70 bg-[#f4c64f]/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[#fff7df]">
-                Preeminence Professional Consulting Agency
-              </p>
-              <h1 className="headline-animated animate-fade-up-delay-1 text-4xl font-extrabold leading-tight text-white md:text-6xl">
-                Transforming Organizations Through Expert Consulting
-              </h1>
-              <p className="typed-tagline mt-4 text-xs font-bold uppercase tracking-[0.14em] text-[#fde8a5] md:text-sm">
-                Build with structure. Scale with impact.
-              </p>
-              <p className="animate-fade-up-delay-2 mt-5 max-w-2xl text-base text-slate-100 md:text-lg">
-                {aboutCopy.intro[0]} {aboutCopy.intro[1]}
-              </p>
-              <Link
-                href="/services"
-                className="animate-pulse-glow hover-lift shine-surface magnetic-cta mt-8 inline-flex rounded-full bg-[#f4c64f] px-6 py-3 text-sm font-extrabold text-[#111827] ring-2 ring-[#fde8a5] transition hover:bg-[#f7ce62]"
-              >
-                Explore Our Services
-              </Link>
+            <div className="relative mx-auto flex min-h-[78vh] w-full max-w-7xl items-center px-4 py-24 md:px-8">
+              <div className="max-w-3xl animate-fade-left">
+                <p className="animate-scale-in mb-4 inline-flex rounded-full border border-[#f4c64f]/70 bg-[#f4c64f]/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[#fff7df]">
+                  Preeminence Professional Consulting Agency
+                </p>
+                <h1 className="headline-animated animate-fade-up-delay-1 text-4xl font-extrabold leading-tight text-white md:text-6xl">
+                  Transforming Organizations Through Expert Consulting
+                </h1>
+                <p className="typed-tagline mt-4 text-xs font-bold uppercase tracking-[0.14em] text-[#fde8a5] md:text-sm">
+                  Build with structure. Scale with impact.
+                </p>
+                <p className="animate-fade-up-delay-2 mt-5 max-w-2xl text-base text-slate-100 md:text-lg">
+                  {aboutCopy.intro[0]} {aboutCopy.intro[1]}
+                </p>
+                <Link
+                  href="/services"
+                  className="animate-pulse-glow hover-lift shine-surface magnetic-cta mt-8 inline-flex rounded-full bg-[#f4c64f] px-6 py-3 text-sm font-extrabold text-[#111827] ring-2 ring-[#fde8a5] transition hover:bg-[#f7ce62]"
+                >
+                  Explore Our Services
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-px text-[#e9f1ff]">
-            <svg viewBox="0 0 1440 180" preserveAspectRatio="none" className="h-16 w-full md:h-20">
-              <path
-                fill="currentColor"
-                d="M0,128L60,122.7C120,117,240,107,360,112C480,117,600,139,720,144C840,149,960,139,1080,122.7C1200,107,1320,85,1380,74.7L1440,64L1440,181L1380,181C1320,181,1200,181,1080,181C960,181,840,181,720,181C600,181,480,181,360,181C240,181,120,181,60,181L0,181Z"
-              />
-            </svg>
-          </div>
-        </section>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 translate-y-px text-[#e9f1ff]">
+              <svg viewBox="0 0 1440 180" preserveAspectRatio="none" className="h-16 w-full md:h-20">
+                <path
+                  fill="currentColor"
+                  d="M0,128L60,122.7C120,117,240,107,360,112C480,117,600,139,720,144C840,149,960,139,1080,122.7C1200,107,1320,85,1380,74.7L1440,64L1440,181L1380,181C1320,181,1200,181,1080,181C960,181,840,181,720,181C600,181,480,181,360,181C240,181,120,181,60,181L0,181Z"
+                />
+              </svg>
+            </div>
+          </section>
 
         <section className="relative overflow-hidden border-b border-[#cfd9f2]">
           <section className="mx-auto w-full max-w-7xl px-4 py-12 md:px-8">

@@ -137,11 +137,19 @@ function MobileDropdown({ label, href, items }: { label: string; href: string; i
   );
 }
 
-export default function Navbar() {
+type NavbarProps = {
+  overlay?: boolean;
+};
+
+export default function Navbar({ overlay = false }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-2 z-50 mx-auto w-[96%] max-w-7xl animate-fade-up">
+    <header
+      className={`z-50 mx-auto w-[96%] max-w-7xl animate-fade-up ${
+        overlay ? "absolute left-1/2 top-3 -translate-x-1/2" : "sticky top-2"
+      }`}
+    >
       <nav className="animate-gradient-pan relative overflow-visible rounded-[2.1rem] border border-[#11284a]/15 bg-[#edf3ff]/88 px-4 py-1.5 text-[#11284a] shadow-lg shadow-slate-300/25 backdrop-blur-xl [animation-duration:16s] md:px-6 md:py-2">
         <div className="pointer-events-none absolute inset-0 rounded-[2.1rem] bg-gradient-to-r from-white/35 via-white/5 to-white/35 opacity-50" />
 
@@ -168,6 +176,12 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
+            <Link
+              href="/login"
+              className="hover-lift inline-flex rounded-full border border-[#d5dfef] bg-white/80 px-4 py-2 text-sm font-bold text-[#11284a] transition hover:border-[#f4c64f] hover:text-emerald-700"
+            >
+              Log In
+            </Link>
             <Link
               href="/book-online"
               className="animate-pulse-glow hover-lift shine-surface magnetic-cta inline-flex rounded-full bg-[#f4c64f] px-5 py-2 text-sm font-extrabold text-[#111827] ring-2 ring-[#f7d982] transition hover:bg-[#f7ce62]"
@@ -198,6 +212,7 @@ export default function Navbar() {
           <div className="animate-scale-in relative mt-3 rounded-2xl border border-[#cfd9f2] bg-[#edf3ff]/95 p-3 shadow-xl lg:hidden">
             <div className="space-y-1">
               <DesktopLink href="/" label="Home" />
+              <DesktopLink href="/login" label="Log In" />
               <MobileDropdown label="About" href="/about-us" items={aboutLinks} />
               <DesktopLink href="/services" label="Services" />
               <MobileDropdown label="Programs" href="/programs" items={programsLinks} />

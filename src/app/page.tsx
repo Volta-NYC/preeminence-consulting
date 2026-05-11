@@ -42,41 +42,6 @@ const coreValues = [
   },
 ];
 
-const homeGalleryImages = [
-  {
-    src: "/images/home/workshop-session.jpg",
-    alt: "Dr. Fuller leading a professional workshop with attendees in a classroom setting",
-    width: 1440,
-    height: 1440,
-    label: "Live Workshop Facilitation",
-    imageClass: "object-center",
-  },
-  {
-    src: "/images/home/community-book-group.jpg",
-    alt: "Community members holding copies of Consequential Correspondence at an event",
-    width: 2047,
-    height: 1366,
-    label: "Community Book Engagement",
-    imageClass: "object-center",
-  },
-  {
-    src: "/images/home/founder-group-portrait.jpg",
-    alt: "Dr. Fuller with partners and supporters at a professional networking event",
-    width: 2048,
-    height: 1365,
-    label: "Leadership Network Building",
-    imageClass: "object-center",
-  },
-  {
-    src: "/images/home/founder-book-portrait.jpg",
-    alt: "Dr. Fuller presenting her book Consequential Correspondence",
-    width: 1366,
-    height: 2047,
-    label: "Founder Publication Spotlight",
-    imageClass: "object-top",
-  },
-];
-
 const socialCardThemes: Record<string, string> = {
   Instagram: "border-pink-300 bg-pink-50",
   Facebook: "border-blue-300 bg-blue-50",
@@ -99,18 +64,18 @@ function CoreValueIcon() {
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#e6efff] text-slate-800">
+    <div className="relative min-h-screen overflow-hidden bg-[#f8fbff] text-slate-800">
       <div
         aria-hidden="true"
         className="islamic-geometry-pattern-home pointer-events-none absolute inset-0 z-[1] opacity-[0.14]"
       />
       <div className="relative z-10">
-        <Navbar />
+        <Navbar overlay />
         <main className="relative z-10">
           <section id="home" className="relative isolate overflow-hidden border-b border-[#cfd9f2]">
             <Image
-              src="/images/home/workshop-session.jpg"
-              alt="Dr. Fuller presenting to a professional audience during a learning session"
+              src="/images/home/founder-group-portrait.jpg"
+              alt="Dr. Fuller with partners and supporters during a leadership networking event"
               fill
               priority
               className="object-cover"
@@ -121,7 +86,7 @@ export default function Home() {
             <div className="animate-float-reverse absolute right-0 top-1/3 h-64 w-64 rounded-full bg-[#dbeafe]/40 blur-3xl" />
             <div className="animate-float-slow absolute bottom-12 right-20 h-36 w-36 rounded-full bg-[#fde68a]/35 blur-3xl" />
 
-            <div className="relative mx-auto flex min-h-[78vh] w-full max-w-7xl items-center px-4 py-24 md:px-8">
+            <div className="relative mx-auto flex min-h-screen w-full max-w-7xl items-center px-4 pb-24 pt-36 md:px-8 md:pt-40">
               <div className="max-w-3xl animate-fade-left">
                 <p className="animate-scale-in mb-4 inline-flex rounded-full border border-[#f4c64f]/70 bg-[#f4c64f]/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[#fff7df]">
                   Preeminence Professional Consulting Agency
@@ -153,36 +118,8 @@ export default function Home() {
             </div>
           </section>
 
-        <section className="relative overflow-hidden border-b border-[#cfd9f2]">
-          <section className="mx-auto w-full max-w-7xl px-4 py-12 md:px-8">
-            <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Featured Moments</h2>
-            <p className="mt-3 max-w-3xl text-slate-600">
-              Real experiences from workshops, publications, and community events led by Preeminence.
-            </p>
-            <div className="stagger-children mt-7 grid grid-cols-1 gap-5 md:grid-cols-2">
-              {homeGalleryImages.map((image, index) => (
-                <article
-                  key={image.label}
-                  className="hover-lift shine-surface overflow-hidden rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] shadow-md"
-                  style={{ animationDelay: `${index * 90}ms` }}
-                >
-                  <div className="group relative aspect-[16/11]">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className={`object-cover transition duration-300 group-hover:scale-[1.02] ${image.imageClass}`}
-                    />
-                  </div>
-                  <div className="border-t border-[#cfd9f2] bg-[#f4f7ff] px-4 py-3">
-                    <p className="text-sm font-semibold text-[#11284a]">{image.label}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="mx-auto w-full max-w-7xl px-4 pb-14 md:px-8">
+        <section className="relative overflow-hidden border-b border-[#cfd9f2] bg-[#f7faff]">
+          <section className="mx-auto w-full max-w-7xl px-4 py-14 md:px-8">
             <div className="stagger-children grid grid-cols-1 gap-6 md:grid-cols-2">
               <article className="hover-lift shine-surface pulse-border animate-fade-left rounded-3xl border border-[#cfd9f2] bg-[#edf3ff] p-7 shadow-md">
                 <h2 className="headline-animated text-3xl font-bold text-[#11284a]">Our Mission</h2>
@@ -249,7 +186,7 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                   className={`hover-lift shine-surface animate-scale-in group flex flex-col items-center gap-3 rounded-2xl border px-8 py-5 text-center transition hover:border-[#f4c64f] hover:shadow-md ${
-                    socialCardThemes[social.label] ?? "border-[#cfd9f2] bg-[#e6efff]"
+                    socialCardThemes[social.label] ?? "border-[#cfd9f2] bg-[#f1f6ff]"
                   }`}
                   style={{ animationDelay: `${index * 120}ms` }}
                 >

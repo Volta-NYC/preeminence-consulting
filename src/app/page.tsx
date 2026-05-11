@@ -78,7 +78,7 @@ export default function Home() {
               alt="Dr. Fuller with partners and supporters during a leadership networking event"
               fill
               priority
-              className="object-cover"
+              className="object-cover object-[center_56%]"
             />
             <div className="animate-gradient-pan absolute inset-0 bg-gradient-to-r from-[#0b172d]/75 via-[#11284a]/55 to-[#0b172d]/70" />
             <div className="islamic-geometry-pattern-home absolute inset-0 opacity-[0.18] mix-blend-soft-light" />

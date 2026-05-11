@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
@@ -45,6 +46,12 @@ export default function LoginPage() {
             >
               Log In (Coming Soon)
             </button>
+            <Link
+              href="/create-account?from=login"
+              className="inline-flex w-full items-center justify-center rounded-xl border border-[#11284a] bg-white px-4 py-3 text-sm font-bold text-[#11284a] transition hover:border-emerald-700 hover:text-emerald-700"
+            >
+              Create Account
+            </Link>
           </div>
         </section>
       </main>

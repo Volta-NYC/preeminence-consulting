@@ -144,15 +144,13 @@ export default function Footer() {
         <p>(c)2026 Preeminence Professional Consulting Agency</p>
         <p className="mt-1 inline-flex items-center justify-center gap-1.5">
           <span>Made by</span>
-          <Image src="/images/home/volta-logo.jpg" alt="Volta logo mark" width={14} height={14} className="rounded-sm" />
           <a
-            href="https://voltanyc.org"
+            href="https://www.novusnyc.org/"
             target="_blank"
             rel="noreferrer"
-            className="font-semibold"
-            style={{ color: "var(--volta-green)" }}
+            className="font-semibold text-[#F6B78D] hover:text-[#F6B78D]"
           >
-            Volta
+            Novus
           </a>
         </p>
       </div>
